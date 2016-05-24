@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+*{
+	box-sizing:border-box;
+	border:0px;
+	padding:0px;
+	margin:0px;}
+.imageSlice{
+	width:750px;
+	position:relative;}
+.imageSlice img{
+	width:100%;
+	display:block;
+	}
+.imageSlice .handle{
+	width:20px;
+	height:20px;
+	border:1px solid green;
+	position:absolute;
+	z-index:4;
+	cursor:pointer;
+	}
+.imageSlice .background{
+	background-color:rgba(0,0,0,0.3);
+	position:absolute;
+	z-index:3;
+	}
+.imageSlice .showFrame{
+	border:1px solid #fff;
+	position:absolute;
+	z-index:2;
+	}
