@@ -36,6 +36,12 @@ function imageSlice(src, target) {
     $(this.target + " .handle.handleTL").unbind("drag").bind("drag", function(ev) {
     	var offsetX=((ev.screenX - oldX) || 0);
     	var offsetY=((ev.screenY - oldY) || 0);
+        $(that.target + " .showFrame").css({
+        top: that.y+offsetY,
+        left: that.x+offsetX,
+        height: that.height-offsetY,
+        width: that.width-offsetX
+        });
         $(that.target + " .handleTL").css({
             top: that.y - 10 + offsetY,
             left: that.x + -10 + offsetX
@@ -70,6 +76,12 @@ function imageSlice(src, target) {
     $(this.target + " .handle.handleTR").unbind("drag").bind("drag", function(ev) {
     	var offsetX=((ev.screenX - oldX) || 0);
     	var offsetY=((ev.screenY - oldY) || 0);
+        $(that.target + " .showFrame").css({
+        top: that.y+offsetY,
+        left: that.x,
+        height: that.height-offsetY,
+        width: that.width+offsetX
+        });
         $(that.target + " .handleTL").css({
             top: that.y - 10 + offsetY,
             left: that.x + -10
@@ -104,6 +116,12 @@ function imageSlice(src, target) {
     $(this.target + " .handle.handleBL").unbind("drag").bind("drag", function(ev) {
     	var offsetX=((ev.screenX - oldX) || 0);
     	var offsetY=((ev.screenY - oldY) || 0);
+        $(that.target + " .showFrame").css({
+        top: that.y,
+        left: that.x+offsetX,
+        height: that.height+offsetY,
+        width: that.width-offsetX
+        });
         $(that.target + " .handleTL").css({
             top: that.y - 10,
             left: that.x + -10 + offsetX
@@ -138,6 +156,12 @@ function imageSlice(src, target) {
     $(this.target + " .handle.handleBR").unbind("drag").bind("drag", function(ev) {
     	var offsetX=((ev.screenX - oldX) || 0);
     	var offsetY=((ev.screenY - oldY) || 0);
+        $(that.target + " .showFrame").css({
+        top: that.y,
+        left: that.x,
+        height: that.height+offsetY,
+        width: that.width+offsetX
+        });
         $(that.target + " .handleTR").css({
             top: that.y - 10,
         	left: that.x + that.width - 10 + offsetX
