@@ -52,6 +52,12 @@ function imageSlice(src, target) {
             width: that.x + offsetX,
             left: 0
         });
+        $(that.target + " .backgroundR").css({
+            top: that.y + offsetY,
+        height: that.height - offsetY,
+        right: 0,
+        left: that.x + that.width
+        });
         $(that.target + " .handleBL").css({
             top: that.y + that.height - 10,
             left: that.x - 10 + offsetX
@@ -72,6 +78,12 @@ function imageSlice(src, target) {
             top: 0,
             height: that.y + offsetY,
             right: 0,
+            left: 0
+        });
+        $(that.target + " .backgroundL").css({
+            top: that.y + offsetY,
+            height: that.height - offsetY,
+            width: that.x,
             left: 0
         });
         $(that.target + " .backgroundR").css({
@@ -108,6 +120,12 @@ function imageSlice(src, target) {
             width: that.x + offsetX,
             left: 0
         });
+        $(that.target + " .backgroundR").css({
+            top: that.y,
+            height: that.height + offsetY,
+            right: 0,
+            left: that.x + that.width
+        });
         $(that.target + " .handleBL").css({
             top: that.y + that.height - 10 + offsetY,
             left: that.x - 10 + offsetX
@@ -129,6 +147,12 @@ function imageSlice(src, target) {
 	        bottom: 0,
 	        right: 0,
 	        left: 0
+        });
+        $(that.target + " .backgroundL").css({
+            top: that.y,
+            height: that.height + offsetY,
+            width: that.x,
+            left: 0
         });
         $(that.target + " .backgroundR").css({
             top: that.y,
