@@ -20,6 +20,12 @@
 	z-index:4;
 	cursor:pointer;
 	}
+.imageSlice .handle.handleTL,.imageSlice .handle.handleBR{
+	cursor: nwse-resize;
+}
+.imageSlice .handle.handleTR,.imageSlice .handle.handleBL{
+	cursor: nesw-resize;
+}
 .imageSlice .background{
 	background-color:rgba(0,0,0,0.3);
 	position:absolute;
